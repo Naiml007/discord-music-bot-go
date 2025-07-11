@@ -4,7 +4,7 @@ WORKDIR /app
 ADD . ./
 RUN CGO_ENABLED=0 GOOS=linux go build -buildvcs=false -a -installsuffix cgo -o bin/discord-music-bot .
 
-FROM alpine:3.21.0
+FROM alpine:3.21.3
 ENV DISCORD_BOT_TOKEN=""
 ENV BOT_ADMINS=""
 ENV COMMAND_PREFIX=""
